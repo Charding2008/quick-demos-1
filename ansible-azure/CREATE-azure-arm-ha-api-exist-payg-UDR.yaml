@@ -82,11 +82,11 @@
         servicePrincipalSecret:
           value: "{{ az_secret }}"
         adminUsername:
-          value: "{{ bigip_azure_user }}"
+          value: "{{ bigip_user }}"
         authenticationType:
           value: password
         adminPasswordOrKey:
-          value: "{{ bigip_azure_pass }}"
+          value: "{{ bigip_pass }}"
         dnsLabel:
           value: "{{ uk_se_name }}"
         instanceName:
@@ -96,7 +96,7 @@
         imageName:
           value: Best25Mbps
         bigIpVersion:
-          value: 13.1.100000
+          value: 14.1.003000
         numberOfAdditionalNics:
           value: 0
         additionalNicLocation:
