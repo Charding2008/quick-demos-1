@@ -19,8 +19,8 @@
     aws_region: eu-west-2
     subnet_start: "10.1"
 
-    sshKey: "arch_id_rsa"
-    ssh_key_file_path: "~/.ssh/id_rsa"
+    sshKey: "charles_id_rsa"
+    ssh_key_file_path: "/Users/charding/.ssh/charles_id_rsa"
 #    
 #------------------------------------------------------------------------------
 #
