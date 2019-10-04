@@ -21,7 +21,7 @@
   
   vars_files:
     - ../../creds/aws_creds.yaml
-    - ../../creds/big_creds.yaml
+    - ../../creds/aws_big_creds.yaml
     - ./vars.yaml
 
 #------------------------------------------------------------------------------
@@ -164,7 +164,6 @@
       - "{{ my_stack.ansible_facts.cloudformation[stack_name].stack_outputs.Bigip1ManagementEipAddress }}"
       - "{{ my_stack.ansible_facts.cloudformation[stack_name].stack_outputs.Bigip2ManagementEipAddress }}"
 
-
   - name: CHECK FOR READY SIGNAL FILE - CHECK EVERY 10 (MAX 600)
     bigip_command:
       commands:
@@ -182,12 +181,12 @@
         validate_certs: no
     register: ssh_output
     delegate_to: localhost
+
     loop:
       - "{{ my_stack.ansible_facts.cloudformation[stack_name].stack_outputs.Bigip1ManagementEipAddress }}"
       - "{{ my_stack.ansible_facts.cloudformation[stack_name].stack_outputs.Bigip2ManagementEipAddress }}"
     until: ssh_output is not failed
     retries: 5
-
 
   - name: SSH TO BIG-IPS AND ENABLE PASSWORD AUTH
     bigip_command:

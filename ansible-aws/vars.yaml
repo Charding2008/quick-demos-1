@@ -20,7 +20,7 @@
     subnet_start: "10.1"
 
     sshKey: "charles_id_rsa"
-    ssh_key_file_path: "/Users/charding/.ssh/charles_id_rsa"
+    ssh_key_file_path: "~/.ssh/id_rsa.pem"
 #    
 #------------------------------------------------------------------------------
 #

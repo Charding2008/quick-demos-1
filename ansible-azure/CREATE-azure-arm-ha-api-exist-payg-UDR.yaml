@@ -22,7 +22,7 @@
 
   vars_files:
     - ../../creds/azure_creds.yaml
-    - ../../creds/big_creds.yaml
+    - ../../creds/azure_big_creds.yaml
     - ./vars.yaml
      
 
@@ -96,7 +96,7 @@
         imageName:
           value: Best25Mbps
         bigIpVersion:
-          value: 14.1.003000
+          value: latest
         numberOfAdditionalNics:
           value: 0
         additionalNicLocation:
