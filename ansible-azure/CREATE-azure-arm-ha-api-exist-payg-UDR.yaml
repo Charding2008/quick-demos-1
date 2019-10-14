@@ -126,7 +126,7 @@
         ntpServer:
           value: 0.pool.ntp.org
         timeZone:
-          value: UTC
+          value: GMT
         customImage:
           value: OPTIONAL 
         restrictedSrcAddress:
